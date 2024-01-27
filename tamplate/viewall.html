@@ -1,0 +1,36 @@
+{% include "head.html" %}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+			<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>ID</th>
+						<th>Photo</th>
+						<th>Name</th>
+						<th>City</th>
+						<th>Address</th>
+						<th>Mobile</th>
+						
+						<th>Party Date</th>
+					</tr>
+					</thead>
+					<tbody>
+						{% for a in getdata %}
+						<tr>
+							<td>{{ a.id }}</td>
+							<td><img src="../{{ a.Photo}}" width="70px"></td>
+							<td>{{ a.name }}</td>
+							<td>{{ a.city }}</td>
+							<td>{{ a.address}}</td>
+							<td>{{ a.mobno }}</td>
+							<td>{{ a.partydate}}</td>
+						</tr>
+						{% endfor %}
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	{% include "footer.html" %}

@@ -1,0 +1,55 @@
+{% include "head.html" %}
+
+
+
+<div class="container">
+
+
+    
+    
+        {% for a in awa %}
+        
+        <div class="row m-3 border border-dark bg-warning ">
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-md-3 ">
+                <img src="../{{ a.Photo }}" width="100px" >
+                {{a.partydate}}
+            </div>
+
+            <div class="col-md-5">
+                <h5>Name : <b>{{ a.name }}</b></h5>
+                <h5> Contact no: <b>{{a.mobno}}</b></h5>
+                
+                <h5>City: <b>{{ a.city }}</b></h5>
+                
+                <h4>Address: <b>{{ a.address }}</b></h4>
+            </div>
+        </div>
+            {% endfor %}
+    
+</div>
+
+
+
+
+
+
+
+
+{% include "footer.html" %}
